@@ -9,3 +9,14 @@ C:\Users\ti\Desktop\Proj\Bloco de notas\obj\Debug\Bloco de notas.csproj.CoreComp
 C:\Users\ti\Desktop\Proj\Bloco de notas\obj\Debug\Bloco de notas.exe
 C:\Users\ti\Desktop\Proj\Bloco de notas\obj\Debug\Bloco de notas.pdb
 C:\Users\ti\Desktop\Proj\Bloco de notas\obj\Debug\Bloco_de_notas.Bloco_de_notas.resources
+C:\Users\ti\Desktop\Proj\ene\Bloco-de-notas\bin\Debug\Bloco de notas.exe.config
+C:\Users\ti\Desktop\Proj\ene\Bloco-de-notas\bin\Debug\Bloco de notas.exe
+C:\Users\ti\Desktop\Proj\ene\Bloco-de-notas\bin\Debug\Bloco de notas.pdb
+C:\Users\ti\Desktop\Proj\ene\Bloco-de-notas\obj\Debug\Bloco de notas.csproj.AssemblyReference.cache
+C:\Users\ti\Desktop\Proj\ene\Bloco-de-notas\obj\Debug\Bloco de notas.csproj.SuggestedBindingRedirects.cache
+C:\Users\ti\Desktop\Proj\ene\Bloco-de-notas\obj\Debug\Bloco_de_notas.Bloco_de_notas.resources
+C:\Users\ti\Desktop\Proj\ene\Bloco-de-notas\obj\Debug\Bloco_de_notas.Properties.Resources.resources
+C:\Users\ti\Desktop\Proj\ene\Bloco-de-notas\obj\Debug\Bloco de notas.csproj.GenerateResource.cache
+C:\Users\ti\Desktop\Proj\ene\Bloco-de-notas\obj\Debug\Bloco de notas.csproj.CoreCompileInputs.cache
+C:\Users\ti\Desktop\Proj\ene\Bloco-de-notas\obj\Debug\Bloco de notas.exe
+C:\Users\ti\Desktop\Proj\ene\Bloco-de-notas\obj\Debug\Bloco de notas.pdb

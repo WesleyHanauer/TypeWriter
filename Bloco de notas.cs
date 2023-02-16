@@ -19,12 +19,20 @@ namespace Bloco_de_notas
         public Bloco_de_notas()
         {
             InitializeComponent();
-            
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            string[] args = Environment.GetCommandLineArgs();
+            if (args.Length > 1)
+            {
+                caminho = args[1];
+                string textoAberto = File.ReadAllText(caminho);
+                txtTexto.Text = textoAberto;
+                txtTexto.SelectionStart = 0;
+                txtTexto.SelectionLength = 0;
+            }
         }
 
         private void salvar()
@@ -46,11 +54,12 @@ namespace Bloco_de_notas
 
         private void salvarEVT(object sender, EventArgs e)
         {
-            if (caminho == null)
+            if (string.IsNullOrEmpty(caminho))
             {
                 salvar();
             }
-            else {
+            else
+            {
                 texto = txtTexto.Text;
                 byte[] bytes = System.Text.Encoding.UTF8.GetBytes(texto);
                 File.WriteAllBytes(caminho, bytes);
