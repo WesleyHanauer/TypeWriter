@@ -19,7 +19,16 @@ namespace Bloco_de_notas
         public Bloco_de_notas()
         {
             InitializeComponent();
+        }
 
+        public float getTamanhoFonte()
+        {
+            return txtTexto.Font.Size;
+        }
+
+        public FontFamily getEstiloFonte()
+        {
+            return txtTexto.Font.FontFamily;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -61,7 +70,7 @@ namespace Bloco_de_notas
             else
             {
                 texto = txtTexto.Text;
-                byte[] bytes = System.Text.Encoding.UTF8.GetBytes(texto);
+                byte[] bytes = Encoding.UTF8.GetBytes(texto);
                 File.WriteAllBytes(caminho, bytes);
             }
         }
@@ -82,6 +91,13 @@ namespace Bloco_de_notas
         private void salvarComoEVT(object sender, EventArgs e)
         {
             salvar();
+        }
+
+        private void editarFonteEVT(object sender, EventArgs e)
+        {
+            editarFonte editarFonte = new editarFonte();
+            editarFonte.ShowDialog();
+            txtTexto.Font = editarFonte.novaFonte();
         }
     }
 }

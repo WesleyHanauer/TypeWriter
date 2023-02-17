@@ -20,3 +20,4 @@ C:\Users\ti\Desktop\Proj\ene\Bloco-de-notas\obj\Debug\Bloco de notas.csproj.Gene
 C:\Users\ti\Desktop\Proj\ene\Bloco-de-notas\obj\Debug\Bloco de notas.csproj.CoreCompileInputs.cache
 C:\Users\ti\Desktop\Proj\ene\Bloco-de-notas\obj\Debug\Bloco de notas.exe
 C:\Users\ti\Desktop\Proj\ene\Bloco-de-notas\obj\Debug\Bloco de notas.pdb
+C:\Users\ti\Desktop\Proj\ene\Bloco-de-notas\obj\Debug\Bloco_de_notas.editarFonte.resources

@@ -56,10 +56,19 @@
     <Compile Include="Bloco de notas.Designer.cs">
       <DependentUpon>Bloco de notas.cs</DependentUpon>
     </Compile>
+    <Compile Include="editarFonte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editarFonte.Designer.cs">
+      <DependentUpon>editarFonte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Bloco de notas.resx">
       <DependentUpon>Bloco de notas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editarFonte.resx">
+      <DependentUpon>editarFonte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
