@@ -107,7 +107,7 @@
             // fonteToolStripMenuItem
             // 
             this.fonteToolStripMenuItem.Name = "fonteToolStripMenuItem";
-            this.fonteToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.fonteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fonteToolStripMenuItem.Text = "Fonte";
             this.fonteToolStripMenuItem.Click += new System.EventHandler(this.editarFonteEVT);
             // 

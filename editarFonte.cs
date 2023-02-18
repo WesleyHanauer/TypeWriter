@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,19 +22,31 @@ namespace Bloco_de_notas
         {
             InitializeComponent();
 
-
             //Adiciona as opções de fonte ao COMBO BOX e mostra a fonte atual quando o form inicializa.
-            for (int i = 8; i < 72; i += 4)
+            for (int i = 8; i <= 72; i += 4)
             {
                 CBtamanhoFonte.Items.Add(i);
             }
+
             CBtamanhoFonte.SelectedItem = (int)tamanhoFonte;
+
+            InstalledFontCollection fontesInstaladas = new InstalledFontCollection();
+            FontFamily[] fontFamilies = fontesInstaladas.Families;
+
+            foreach (FontFamily fontFamily in fontFamilies)
+            {
+                CBestiloFonte.Items.Add(fontFamily.Name);
+            }
+
+            CBestiloFonte.SelectedItem = estiloFonte.Name;
         }
 
 
         public Font novaFonte()
         {
-            Font fonte = new Font("Arial", (int)CBtamanhoFonte.SelectedItem, FontStyle.Regular);
+            string fontFamilyString = (string)CBestiloFonte.SelectedItem;
+            FontFamily fontFamily = new FontFamily(fontFamilyString);
+            Font fonte = new Font(fontFamily, (int)CBtamanhoFonte.SelectedItem, FontStyle.Regular);
             return fonte;
         }
     }
