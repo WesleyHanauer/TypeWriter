@@ -22,7 +22,8 @@ namespace Bloco_de_notas
         {
             InitializeComponent();
 
-            //Adiciona as opções de fonte ao COMBO BOX e mostra a fonte atual quando o form inicializa.
+            //Adiciona as opções de fonte e tamanhos ao COMBO BOX e mostra a fonte e tamanho atual quando o form inicializa.
+
             for (int i = 8; i <= 72; i += 4)
             {
                 CBtamanhoFonte.Items.Add(i);

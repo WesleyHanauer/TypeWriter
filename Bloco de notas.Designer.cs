@@ -53,6 +53,7 @@
             this.txtTexto.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtTexto.Size = new System.Drawing.Size(838, 473);
             this.txtTexto.TabIndex = 0;
+            this.txtTexto.TextChanged += new System.EventHandler(this.desvalidarBoolSalvo);
             // 
             // btnMenu
             // 
@@ -107,7 +108,7 @@
             // fonteToolStripMenuItem
             // 
             this.fonteToolStripMenuItem.Name = "fonteToolStripMenuItem";
-            this.fonteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fonteToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.fonteToolStripMenuItem.Text = "Fonte";
             this.fonteToolStripMenuItem.Click += new System.EventHandler(this.editarFonteEVT);
             // 

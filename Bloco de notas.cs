@@ -15,10 +15,12 @@ namespace Bloco_de_notas
     {
         private string texto;
         private string caminho;
+        bool salvo = false;
 
         public Bloco_de_notas()
         {
             InitializeComponent();
+            this.FormClosing += confirmarSaida;
         }
 
         public float getTamanhoFonte()
@@ -59,6 +61,7 @@ namespace Bloco_de_notas
                     escritor.WriteLine(txtTexto.Text);
                 }
             }
+            salvo = true;
         }
 
         private void salvarEVT(object sender, EventArgs e)
@@ -98,6 +101,23 @@ namespace Bloco_de_notas
             editarFonte editarFonte = new editarFonte();
             editarFonte.ShowDialog();
             txtTexto.Font = editarFonte.novaFonte();
+        }
+
+        private void confirmarSaida(object sender, FormClosingEventArgs e)
+        {
+            if (salvo == false)
+            {
+                DialogResult confirmarSaida = MessageBox.Show("Sair sem salvar?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirmarSaida == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        private void desvalidarBoolSalvo(object sender, EventArgs e)
+        {
+            salvo = false;
         }
     }
 }
