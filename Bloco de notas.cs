@@ -33,7 +33,7 @@ namespace Bloco_de_notas
             return txtTexto.Font.FontFamily;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void carregarBlocoDeNotas(object sender, EventArgs e)
         {
             string[] args = Environment.GetCommandLineArgs();
             if (args.Length > 1)
@@ -98,9 +98,9 @@ namespace Bloco_de_notas
 
         private void editarFonteEVT(object sender, EventArgs e)
         {
-            editarFonte editarFonte = new editarFonte();
-            editarFonte.ShowDialog();
-            txtTexto.Font = editarFonte.novaFonte();
+            editarFonte editarFonteForm = new editarFonte(txtTexto.Font.FontFamily, txtTexto.Font.Size);
+            editarFonteForm.ShowDialog();
+            txtTexto.Font = editarFonteForm.novaFonte();
         }
 
         private void confirmarSaida(object sender, FormClosingEventArgs e)

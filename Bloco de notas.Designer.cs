@@ -122,7 +122,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Bloco_de_notas";
             this.Text = "Bloco de notas";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.carregarBlocoDeNotas);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

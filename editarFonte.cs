@@ -18,9 +18,12 @@ namespace Bloco_de_notas
         private float tamanhoFonte = bloco.getTamanhoFonte();
         private FontFamily estiloFonte = bloco.getEstiloFonte();
 
-        public editarFonte()
+        public editarFonte(FontFamily estiloFonte, float tamanhoFonte)
         {
             InitializeComponent();
+
+            this.estiloFonte = estiloFonte;
+            this.tamanhoFonte = tamanhoFonte;
 
             //Adiciona as opções de fonte e tamanhos ao COMBO BOX e mostra a fonte e tamanho atual quando o form inicializa.
 
