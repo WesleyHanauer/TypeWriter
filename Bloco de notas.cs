@@ -105,10 +105,18 @@ namespace Bloco_de_notas
 
         private void confirmarSaida(object sender, FormClosingEventArgs e)
         {
-            if (salvo == false)
+            if (!salvo)
             {
-                DialogResult confirmarSaida = MessageBox.Show("Sair sem salvar?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult confirmarSaida = MessageBox.Show("Salvar antes de sair?", "Confirmação", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 if (confirmarSaida == DialogResult.No)
+                {
+                    e.Cancel = false;
+                }
+                else if(confirmarSaida == DialogResult.Yes)
+                {
+                    salvarEVT(sender, e);
+                }
+                else
                 {
                     e.Cancel = true;
                 }
