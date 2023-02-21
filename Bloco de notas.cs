@@ -16,10 +16,12 @@ namespace Bloco_de_notas
         private string texto;
         private string caminho;
         bool salvo = false;
+        //Font estiloFonteSalva = Properties.Settings.Default.fonteEstilo;
 
         public Bloco_de_notas()
         {
             InitializeComponent();
+            //txtTexto.Font = estiloFonteSalva;
             this.FormClosing += ConfirmarSaida;
         }
 
@@ -43,6 +45,7 @@ namespace Bloco_de_notas
                 txtTexto.Text = textoAberto;
                 txtTexto.SelectionStart = 0;
                 txtTexto.SelectionLength = 0;
+                salvo = true;
             }
         }
 
@@ -75,6 +78,7 @@ namespace Bloco_de_notas
                 texto = txtTexto.Text;
                 byte[] bytes = Encoding.UTF8.GetBytes(texto);
                 File.WriteAllBytes(caminho, bytes);
+                salvo = true;
             }
         }
 
@@ -105,7 +109,9 @@ namespace Bloco_de_notas
 
         private void ConfirmarSaida(object sender, FormClosingEventArgs e)
         {
-            if (!salvo)
+            //EditarFonte editarFonteForm = new EditarFonte(txtTexto.Font.FontFamily, txtTexto.Font.Size);
+            //Properties.Settings.Default.fonteEstilo = editarFonteForm.NovaFonte();
+            if (salvo == false)
             {
                 DialogResult ConfirmarSaida = MessageBox.Show("Salvar antes de sair?", "Confirmação", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 if (ConfirmarSaida == DialogResult.No)

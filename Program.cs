@@ -17,6 +17,10 @@ namespace Bloco_de_notas
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Bloco_de_notas());
+            //Application.ApplicationExit += (sender, e) =>
+            //{
+            //    Properties.Settings.Default.Save();
+            //};
         }
     }
 }
