@@ -12,13 +12,13 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Bloco_de_notas
 {
-    public partial class editarFonte : Form
+    public partial class EditarFonte : Form
     {
         private static Bloco_de_notas bloco = new Bloco_de_notas();
-        private float tamanhoFonte = bloco.getTamanhoFonte();
-        private FontFamily estiloFonte = bloco.getEstiloFonte();
+        private float tamanhoFonte = bloco.GetTamanhoFonte();
+        private FontFamily estiloFonte = bloco.GetEstiloFonte();
 
-        public editarFonte(FontFamily estiloFonte, float tamanhoFonte)
+        public EditarFonte(FontFamily estiloFonte, float tamanhoFonte)
         {
             InitializeComponent();
 
@@ -46,7 +46,7 @@ namespace Bloco_de_notas
         }
 
 
-        public Font novaFonte()
+        public Font NovaFonte()
         {
             string fontFamilyString = (string)CBestiloFonte.SelectedItem;
             FontFamily fontFamily = new FontFamily(fontFamilyString);

@@ -1,6 +1,6 @@
 ﻿namespace Bloco_de_notas
 {
-    partial class editarFonte
+    partial class EditarFonte
     {
         /// <summary>
         /// Required designer variable.

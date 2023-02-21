@@ -53,7 +53,7 @@
             this.txtTexto.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtTexto.Size = new System.Drawing.Size(838, 473);
             this.txtTexto.TabIndex = 0;
-            this.txtTexto.TextChanged += new System.EventHandler(this.desvalidarBoolSalvo);
+            this.txtTexto.TextChanged += new System.EventHandler(this.DesvalidarBoolSalvo);
             // 
             // btnMenu
             // 
@@ -70,21 +70,21 @@
             this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
             this.abrirToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.abrirToolStripMenuItem.Text = "Abrir";
-            this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirEVT);
+            this.abrirToolStripMenuItem.Click += new System.EventHandler(this.AbrirEVT);
             // 
             // salvarToolStripMenuItem
             // 
             this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
             this.salvarToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.salvarToolStripMenuItem.Text = "Salvar";
-            this.salvarToolStripMenuItem.Click += new System.EventHandler(this.salvarEVT);
+            this.salvarToolStripMenuItem.Click += new System.EventHandler(this.SalvarEVT);
             // 
             // salvarComoToolStripMenuItem
             // 
             this.salvarComoToolStripMenuItem.Name = "salvarComoToolStripMenuItem";
             this.salvarComoToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.salvarComoToolStripMenuItem.Text = "Salvar como";
-            this.salvarComoToolStripMenuItem.Click += new System.EventHandler(this.salvarComoEVT);
+            this.salvarComoToolStripMenuItem.Click += new System.EventHandler(this.SalvarComoEVT);
             // 
             // menuStrip1
             // 
@@ -110,7 +110,7 @@
             this.fonteToolStripMenuItem.Name = "fonteToolStripMenuItem";
             this.fonteToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.fonteToolStripMenuItem.Text = "Fonte";
-            this.fonteToolStripMenuItem.Click += new System.EventHandler(this.editarFonteEVT);
+            this.fonteToolStripMenuItem.Click += new System.EventHandler(this.EditarFonteEVT);
             // 
             // Bloco_de_notas
             // 

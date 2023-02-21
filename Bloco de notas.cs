@@ -20,15 +20,15 @@ namespace Bloco_de_notas
         public Bloco_de_notas()
         {
             InitializeComponent();
-            this.FormClosing += confirmarSaida;
+            this.FormClosing += ConfirmarSaida;
         }
 
-        public float getTamanhoFonte()
+        public float GetTamanhoFonte()
         {
             return txtTexto.Font.Size;
         }
 
-        public FontFamily getEstiloFonte()
+        public FontFamily GetEstiloFonte()
         {
             return txtTexto.Font.FontFamily;
         }
@@ -46,7 +46,7 @@ namespace Bloco_de_notas
             }
         }
 
-        private void salvar()
+        private void Salvar()
         {
             SaveFileDialog salvarArquivo = new SaveFileDialog();
             salvarArquivo.Filter = "Text Files (*.txt)|*.txt";
@@ -64,11 +64,11 @@ namespace Bloco_de_notas
             salvo = true;
         }
 
-        private void salvarEVT(object sender, EventArgs e)
+        private void SalvarEVT(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(caminho))
+            if (string.IsNullOrWhiteSpace(caminho))
             {
-                salvar();
+                Salvar();
             }
             else
             {
@@ -78,7 +78,7 @@ namespace Bloco_de_notas
             }
         }
 
-        private void abrirEVT(object sender, EventArgs e)
+        private void AbrirEVT(object sender, EventArgs e)
         {
             OpenFileDialog abrirArquivo = new OpenFileDialog();
             abrirArquivo.FilterIndex = 0;
@@ -91,30 +91,30 @@ namespace Bloco_de_notas
             }
         }
 
-        private void salvarComoEVT(object sender, EventArgs e)
+        private void SalvarComoEVT(object sender, EventArgs e)
         {
-            salvar();
+            Salvar();
         }
 
-        private void editarFonteEVT(object sender, EventArgs e)
+        private void EditarFonteEVT(object sender, EventArgs e)
         {
-            editarFonte editarFonteForm = new editarFonte(txtTexto.Font.FontFamily, txtTexto.Font.Size);
+            EditarFonte editarFonteForm = new EditarFonte(txtTexto.Font.FontFamily, txtTexto.Font.Size);
             editarFonteForm.ShowDialog();
-            txtTexto.Font = editarFonteForm.novaFonte();
+            txtTexto.Font = editarFonteForm.NovaFonte();
         }
 
-        private void confirmarSaida(object sender, FormClosingEventArgs e)
+        private void ConfirmarSaida(object sender, FormClosingEventArgs e)
         {
             if (!salvo)
             {
-                DialogResult confirmarSaida = MessageBox.Show("Salvar antes de sair?", "Confirmação", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-                if (confirmarSaida == DialogResult.No)
+                DialogResult ConfirmarSaida = MessageBox.Show("Salvar antes de sair?", "Confirmação", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                if (ConfirmarSaida == DialogResult.No)
                 {
                     e.Cancel = false;
                 }
-                else if(confirmarSaida == DialogResult.Yes)
+                else if(ConfirmarSaida == DialogResult.Yes)
                 {
-                    salvarEVT(sender, e);
+                    SalvarEVT(sender, e);
                 }
                 else
                 {
@@ -123,7 +123,7 @@ namespace Bloco_de_notas
             }
         }
 
-        private void desvalidarBoolSalvo(object sender, EventArgs e)
+        private void DesvalidarBoolSalvo(object sender, EventArgs e)
         {
             salvo = false;
         }
