@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.IO;
 using Bloco_de_notas.Properties;
 using System.Runtime;
+using System.Runtime.CompilerServices;
+using System.Xml.Linq;
 
 namespace Bloco_de_notas
 {
@@ -50,6 +52,7 @@ namespace Bloco_de_notas
                 txtTexto.SelectionLength = 0;
                 salvo = true;
             }
+            AtualizarIndicador(salvo);
         }
 
         private void Salvar()
@@ -83,6 +86,7 @@ namespace Bloco_de_notas
                 File.WriteAllBytes(caminho, bytes);
                 salvo = true;
             }
+            AtualizarIndicador(salvo);
         }
 
         private void AbrirEVT(object sender, EventArgs e)
@@ -95,12 +99,15 @@ namespace Bloco_de_notas
                 caminho = abrirArquivo.FileName;
                 string textoAberto = File.ReadAllText(caminho);
                 txtTexto.Text = textoAberto;
+                salvo = true;
             }
+            AtualizarIndicador(salvo);
         }
 
         private void SalvarComoEVT(object sender, EventArgs e)
         {
             Salvar();
+            AtualizarIndicador(salvo);
         }
 
         private void EditarFonteEVT(object sender, EventArgs e)
@@ -135,6 +142,16 @@ namespace Bloco_de_notas
         private void DesvalidarBoolSalvo(object sender, EventArgs e)
         {
             salvo = false;
+            AtualizarIndicador(salvo);
+        }
+
+        private string AtualizarIndicador(bool salvo)
+        {
+            if(salvo == false)
+            {
+                return this.Text = "Bloco de notas *";
+            }
+            return this.Text = "Bloco de notas";
         }
     }
 }
