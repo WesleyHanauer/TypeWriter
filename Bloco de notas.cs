@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Bloco_de_notas.Properties;
+using System.Runtime;
 
 namespace Bloco_de_notas
 {
@@ -16,12 +18,11 @@ namespace Bloco_de_notas
         private string texto;
         private string caminho;
         bool salvo = false;
-        //Font estiloFonteSalva = Properties.Settings.Default.fonteEstilo;
+        Font estiloFonteSalva = Settings.Default.fonteEstilo;
 
         public Bloco_de_notas()
         {
             InitializeComponent();
-            //txtTexto.Font = estiloFonteSalva;
             this.FormClosing += ConfirmarSaida;
             this.Load += carregarBlocoDeNotas;
         }
@@ -38,6 +39,7 @@ namespace Bloco_de_notas
 
         private void carregarBlocoDeNotas(object sender, EventArgs e)
         {
+            txtTexto.Font = Settings.Default.fonteEstilo;
             string[] args = Environment.GetCommandLineArgs();
             if (args.Length > 1)
             {
@@ -110,8 +112,8 @@ namespace Bloco_de_notas
 
         private void ConfirmarSaida(object sender, FormClosingEventArgs e)
         {
-            //EditarFonte editarFonteForm = new EditarFonte(txtTexto.Font.FontFamily, txtTexto.Font.Size);
-            //Properties.Settings.Default.fonteEstilo = editarFonteForm.NovaFonte();
+            Settings.Default.fonteEstilo = txtTexto.Font;
+            Settings.Default.Save();
             if (salvo == false)
             {
                 DialogResult ConfirmarSaida = MessageBox.Show("Salvar antes de sair?", "Confirmação", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
