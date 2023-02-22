@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bloco_de_notas));
             this.txtTexto = new System.Windows.Forms.TextBox();
             this.btnMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -119,6 +120,7 @@
             this.ClientSize = new System.Drawing.Size(838, 500);
             this.Controls.Add(this.txtTexto);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Bloco_de_notas";
             this.Text = "Bloco de notas";

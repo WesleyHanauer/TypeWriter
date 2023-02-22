@@ -23,6 +23,7 @@ namespace Bloco_de_notas
             InitializeComponent();
             //txtTexto.Font = estiloFonteSalva;
             this.FormClosing += ConfirmarSaida;
+            this.Load += carregarBlocoDeNotas;
         }
 
         public float GetTamanhoFonte()

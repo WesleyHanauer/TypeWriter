@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarFonte));
             this.CBtamanhoFonte = new System.Windows.Forms.ComboBox();
             this.CBestiloFonte = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -48,7 +49,7 @@
             this.CBestiloFonte.Size = new System.Drawing.Size(219, 21);
             this.CBestiloFonte.TabIndex = 1;
             // 
-            // editarFonte
+            // EditarFonte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -56,7 +57,8 @@
             this.ClientSize = new System.Drawing.Size(243, 73);
             this.Controls.Add(this.CBestiloFonte);
             this.Controls.Add(this.CBtamanhoFonte);
-            this.Name = "editarFonte";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "EditarFonte";
             this.Text = "Fonte";
             this.ResumeLayout(false);
 
