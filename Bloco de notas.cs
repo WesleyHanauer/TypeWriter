@@ -26,20 +26,10 @@ namespace Bloco_de_notas
         {
             InitializeComponent();
             this.FormClosing += ConfirmarSaida;
-            this.Load += carregarBlocoDeNotas;
+            this.Load += CarregarBlocoDeNotas;
         }
 
-        public float GetTamanhoFonte()
-        {
-            return txtTexto.Font.Size;
-        }
-
-        public FontFamily GetEstiloFonte()
-        {
-            return txtTexto.Font.FontFamily;
-        }
-
-        private void carregarBlocoDeNotas(object sender, EventArgs e)
+        private void CarregarBlocoDeNotas(object sender, EventArgs e)
         {
             txtTexto.Font = Settings.Default.fonteEstilo;
             string[] args = Environment.GetCommandLineArgs();
@@ -53,6 +43,38 @@ namespace Bloco_de_notas
                 salvo = true;
             }
             AtualizarIndicador(salvo);
+        }
+
+        private void ConfirmarSaida(object sender, FormClosingEventArgs e)
+        {
+            Settings.Default.fonteEstilo = txtTexto.Font;
+            Settings.Default.Save();
+            if (salvo == false)
+            {
+                DialogResult ConfirmarSaida = MessageBox.Show("Salvar antes de sair?", "Confirmação", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                if (ConfirmarSaida == DialogResult.No)
+                {
+                    e.Cancel = false;
+                }
+                else if (ConfirmarSaida == DialogResult.Yes)
+                {
+                    SalvarEVT(sender, e);
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        public float GetTamanhoFonte()
+        {
+            return txtTexto.Font.Size;
+        }
+
+        public FontFamily GetEstiloFonte()
+        {
+            return txtTexto.Font.FontFamily;
         }
 
         private void Salvar()
@@ -115,28 +137,6 @@ namespace Bloco_de_notas
             EditarFonte editarFonteForm = new EditarFonte(txtTexto.Font.FontFamily, txtTexto.Font.Size);
             editarFonteForm.ShowDialog();
             txtTexto.Font = editarFonteForm.NovaFonte();
-        }
-
-        private void ConfirmarSaida(object sender, FormClosingEventArgs e)
-        {
-            Settings.Default.fonteEstilo = txtTexto.Font;
-            Settings.Default.Save();
-            if (salvo == false)
-            {
-                DialogResult ConfirmarSaida = MessageBox.Show("Salvar antes de sair?", "Confirmação", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-                if (ConfirmarSaida == DialogResult.No)
-                {
-                    e.Cancel = false;
-                }
-                else if(ConfirmarSaida == DialogResult.Yes)
-                {
-                    SalvarEVT(sender, e);
-                }
-                else
-                {
-                    e.Cancel = true;
-                }
-            }
         }
 
         private void DesvalidarBoolSalvo(object sender, EventArgs e)

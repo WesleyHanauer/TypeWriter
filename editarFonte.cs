@@ -22,11 +22,13 @@ namespace Bloco_de_notas
         {
             InitializeComponent();
 
+            this.Load += InicializarComponentes;
             this.estiloFonte = estiloFonte;
             this.tamanhoFonte = tamanhoFonte;
+        }
 
-            //Adiciona as opções de fonte e tamanhos ao COMBO BOX e mostra a fonte e tamanho atual quando o form inicializa.
-
+        private void InicializarComponentes(object sender, EventArgs e)
+        {
             for (int i = 8; i <= 72; i += 4)
             {
                 CBtamanhoFonte.Items.Add(i);
@@ -44,7 +46,6 @@ namespace Bloco_de_notas
 
             CBestiloFonte.SelectedItem = estiloFonte.Name;
         }
-
 
         public Font NovaFonte()
         {
