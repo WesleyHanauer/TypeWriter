@@ -27,6 +27,36 @@ namespace Bloco_de_notas
             InitializeComponent();
             this.FormClosing += ConfirmarSaida;
             this.Load += CarregarBlocoDeNotas;
+            txtTexto.KeyDown += SalvarAtalho;
+            txtTexto.KeyDown += SalvarComoAtalho;
+            txtTexto.KeyDown += AbrirAtalho;
+        }
+
+        private void SalvarAtalho(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.S)
+            {
+                SalvarEVT(sender, e);
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void SalvarComoAtalho(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.Shift && e.KeyCode == Keys.S)
+            {
+                SalvarComoEVT(sender, e);
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void AbrirAtalho(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.O)
+            {
+                AbrirEVT(sender, e);
+                e.SuppressKeyPress = true;
+            }
         }
 
         private void CarregarBlocoDeNotas(object sender, EventArgs e)
