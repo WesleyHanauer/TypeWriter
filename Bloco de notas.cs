@@ -25,8 +25,9 @@ namespace Bloco_de_notas
         public Bloco_de_notas()
         {
             InitializeComponent();
-            this.FormClosing += ConfirmarSaida;
             this.Load += CarregarBlocoDeNotas;
+            this.FormClosing += ConfirmarSaida;
+            this.FormClosing += SalvarFonte;
             txtTexto.KeyDown += SalvarAtalho;
             txtTexto.KeyDown += SalvarComoAtalho;
             txtTexto.KeyDown += AbrirAtalho;
@@ -77,8 +78,6 @@ namespace Bloco_de_notas
 
         private void ConfirmarSaida(object sender, FormClosingEventArgs e)
         {
-            Settings.Default.fonteEstilo = txtTexto.Font;
-            Settings.Default.Save();
             if (salvo == false)
             {
                 DialogResult ConfirmarSaida = MessageBox.Show("Salvar antes de sair?", "Confirmação", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
@@ -95,6 +94,12 @@ namespace Bloco_de_notas
                     e.Cancel = true;
                 }
             }
+        }
+
+        private void SalvarFonte(object sender, FormClosingEventArgs e)
+        {
+            Settings.Default.fonteEstilo = txtTexto.Font;
+            Settings.Default.Save();
         }
 
         public float GetTamanhoFonte()
