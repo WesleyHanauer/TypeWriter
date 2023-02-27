@@ -74,6 +74,16 @@ namespace Bloco_de_notas
                 salvo = true;
             }
             AtualizarIndicador(salvo);
+
+            if (Properties.Settings.Default.windowPos != null)
+            {
+                this.Location = Properties.Settings.Default.windowPos;
+            }
+
+            if (Properties.Settings.Default.windowSize != null)
+            {
+                this.Size = Properties.Settings.Default.windowSize;
+            }
         }
 
         private void ConfirmarSaida(object sender, FormClosingEventArgs e)
@@ -94,6 +104,10 @@ namespace Bloco_de_notas
                     e.Cancel = true;
                 }
             }
+
+            Properties.Settings.Default.windowPos = this.Location;
+            Properties.Settings.Default.windowSize = this.Size;
+            Properties.Settings.Default.Save();
         }
 
         private void SalvarFonte(object sender, FormClosingEventArgs e)
