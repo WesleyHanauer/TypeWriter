@@ -20,14 +20,15 @@ namespace Bloco_de_notas
         private string texto;
         private string caminho;
         bool salvo = false;
-        Font estiloFonteSalva = Settings.Default.fonteEstilo;
 
         public Bloco_de_notas()
         {
             InitializeComponent();
             this.Load += CarregarBlocoDeNotas;
+            this.Load += CarregarPosicaoETamanho;
             this.FormClosing += ConfirmarSaida;
             this.FormClosing += SalvarFonte;
+            this.FormClosing += SalvarPosicaoETamanho;
             txtTexto.KeyDown += SalvarAtalho;
             txtTexto.KeyDown += SalvarComoAtalho;
             txtTexto.KeyDown += AbrirAtalho;
@@ -74,16 +75,6 @@ namespace Bloco_de_notas
                 salvo = true;
             }
             AtualizarIndicador(salvo);
-
-            if (Properties.Settings.Default.windowPos != null)
-            {
-                this.Location = Properties.Settings.Default.windowPos;
-            }
-
-            if (Properties.Settings.Default.windowSize != null)
-            {
-                this.Size = Properties.Settings.Default.windowSize;
-            }
         }
 
         private void ConfirmarSaida(object sender, FormClosingEventArgs e)
@@ -104,10 +95,27 @@ namespace Bloco_de_notas
                     e.Cancel = true;
                 }
             }
+        }
 
+        private void SalvarPosicaoETamanho(object sender, FormClosingEventArgs e)
+        {
             Properties.Settings.Default.windowPos = this.Location;
             Properties.Settings.Default.windowSize = this.Size;
             Properties.Settings.Default.Save();
+        }
+
+
+        private void CarregarPosicaoETamanho(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.windowPos != null)
+            {
+                this.Location = Properties.Settings.Default.windowPos;
+            }
+
+            if (Properties.Settings.Default.windowSize != null)
+            {
+                this.Size = Properties.Settings.Default.windowSize;
+            }
         }
 
         private void SalvarFonte(object sender, FormClosingEventArgs e)
