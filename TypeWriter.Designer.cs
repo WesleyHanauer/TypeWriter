@@ -1,16 +1,17 @@
-﻿namespace Bloco_de_notas
+﻿namespace Type_Writer
 {
-    partial class Bloco_de_notas
+    partial class Type_Writer
     {
         /// <summary>
-        /// Variável de designer necessária.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpar os recursos que estão sendo usados.
+        /// Clean up the resources being used.
         /// </summary>
-        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
+        /// <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -28,8 +29,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bloco_de_notas));
-            this.txtTexto = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Type_Writer));
+            this.txtText = new System.Windows.Forms.TextBox();
             this.btnMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salvarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,19 +43,19 @@
             // 
             // txtTexto
             // 
-            this.txtTexto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTexto.BackColor = System.Drawing.Color.White;
-            this.txtTexto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTexto.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtTexto.Location = new System.Drawing.Point(0, 27);
-            this.txtTexto.Multiline = true;
-            this.txtTexto.Name = "txtTexto";
-            this.txtTexto.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtTexto.Size = new System.Drawing.Size(838, 473);
-            this.txtTexto.TabIndex = 0;
-            this.txtTexto.TextChanged += new System.EventHandler(this.DesvalidarBoolSalvo);
+            this.txtText.BackColor = System.Drawing.Color.White;
+            this.txtText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtText.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtText.Location = new System.Drawing.Point(0, 27);
+            this.txtText.Multiline = true;
+            this.txtText.Name = "txtTexto";
+            this.txtText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtText.Size = new System.Drawing.Size(838, 473);
+            this.txtText.TabIndex = 0;
+            this.txtText.TextChanged += new System.EventHandler(this.InvalidateIsSavedBoolean);
             // 
             // btnMenu
             // 
@@ -69,23 +70,23 @@
             // abrirToolStripMenuItem
             // 
             this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
-            this.abrirToolStripMenuItem.Text = "Abrir";
-            this.abrirToolStripMenuItem.Click += new System.EventHandler(this.AbrirEVT);
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.abrirToolStripMenuItem.Text = "Open";
+            this.abrirToolStripMenuItem.Click += new System.EventHandler(this.Open_Click);
             // 
             // salvarToolStripMenuItem
             // 
             this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
-            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
-            this.salvarToolStripMenuItem.Text = "Salvar";
-            this.salvarToolStripMenuItem.Click += new System.EventHandler(this.SalvarEVT);
+            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salvarToolStripMenuItem.Text = "Save";
+            this.salvarToolStripMenuItem.Click += new System.EventHandler(this.Save_Click);
             // 
             // salvarComoToolStripMenuItem
             // 
             this.salvarComoToolStripMenuItem.Name = "salvarComoToolStripMenuItem";
-            this.salvarComoToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
-            this.salvarComoToolStripMenuItem.Text = "Salvar como";
-            this.salvarComoToolStripMenuItem.Click += new System.EventHandler(this.SalvarComoEVT);
+            this.salvarComoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salvarComoToolStripMenuItem.Text = "Save as";
+            this.salvarComoToolStripMenuItem.Click += new System.EventHandler(this.SaveAs_Click);
             // 
             // menuStrip1
             // 
@@ -103,28 +104,28 @@
             this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fonteToolStripMenuItem});
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.editarToolStripMenuItem.Text = "Editar";
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.editarToolStripMenuItem.Text = "Edit";
             // 
             // fonteToolStripMenuItem
             // 
             this.fonteToolStripMenuItem.Name = "fonteToolStripMenuItem";
-            this.fonteToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
-            this.fonteToolStripMenuItem.Text = "Fonte";
-            this.fonteToolStripMenuItem.Click += new System.EventHandler(this.EditarFonteEVT);
+            this.fonteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fonteToolStripMenuItem.Text = "Font";
+            this.fonteToolStripMenuItem.Click += new System.EventHandler(this.EditFont_Click);
             // 
-            // Bloco_de_notas
+            // Type_Writer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(838, 500);
-            this.Controls.Add(this.txtTexto);
+            this.Controls.Add(this.txtText);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Bloco_de_notas";
+            this.Name = "Type_Writer";
             this.Text = "Bloco de notas";
-            this.Load += new System.EventHandler(this.CarregarBlocoDeNotas);
+            this.Load += new System.EventHandler(this.LoadMainForm);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -134,7 +135,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtTexto;
+        private System.Windows.Forms.TextBox txtText;
         private System.Windows.Forms.ToolStripMenuItem btnMenu;
         private System.Windows.Forms.ToolStripMenuItem abrirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salvarToolStripMenuItem;

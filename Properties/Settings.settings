@@ -2,7 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Bloco_de_notas.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="fonteEstilo" Type="System.Drawing.Font" Scope="User">
+    <Setting Name="fontStyle" Type="System.Drawing.Font" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="windowPos" Type="System.Drawing.Point" Scope="User">

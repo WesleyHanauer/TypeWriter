@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{136747F0-2A42-48DC-9061-CF6F741DFE2C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Bloco_de_notas</RootNamespace>
-    <AssemblyName>Bloco de notas</AssemblyName>
+    <RootNamespace>Type_Writer</RootNamespace>
+    <AssemblyName>TypeWriter</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icone.ico</ApplicationIcon>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -50,26 +50,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bloco de notas.cs">
+    <Compile Include="TypeWriter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Bloco de notas.Designer.cs">
-      <DependentUpon>Bloco de notas.cs</DependentUpon>
+    <Compile Include="TypeWriter.Designer.cs">
+      <DependentUpon>TypeWriter.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditarFonte.cs">
+    <Compile Include="EditFont.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditarFonte.Designer.cs">
-      <DependentUpon>EditarFonte.cs</DependentUpon>
+    <Compile Include="EditFont.Designer.cs">
+      <DependentUpon>EditFont.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
-    <EmbeddedResource Include="Bloco de notas.resx">
-      <DependentUpon>Bloco de notas.cs</DependentUpon>
+    <EmbeddedResource Include="TypeWriter.resx">
+      <DependentUpon>TypeWriter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditarFonte.resx">
-      <DependentUpon>EditarFonte.cs</DependentUpon>
+    <EmbeddedResource Include="EditFont.resx">
+      <DependentUpon>EditFont.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,6 +79,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -94,7 +95,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icone.ico" />
+    <Content Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

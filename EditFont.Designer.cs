@@ -1,6 +1,6 @@
-﻿namespace Bloco_de_notas
+﻿namespace Type_Writer
 {
-    partial class EditarFonte
+    partial class EditFont
     {
         /// <summary>
         /// Required designer variable.
@@ -28,45 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarFonte));
-            this.CBtamanhoFonte = new System.Windows.Forms.ComboBox();
-            this.CBestiloFonte = new System.Windows.Forms.ComboBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditFont));
+            this.CBfontSize = new System.Windows.Forms.ComboBox();
+            this.CBfontStyle = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // CBtamanhoFonte
+            // CBfontSize
             // 
-            this.CBtamanhoFonte.FormattingEnabled = true;
-            this.CBtamanhoFonte.Location = new System.Drawing.Point(159, 12);
-            this.CBtamanhoFonte.Name = "CBtamanhoFonte";
-            this.CBtamanhoFonte.Size = new System.Drawing.Size(72, 21);
-            this.CBtamanhoFonte.TabIndex = 0;
+            this.CBfontSize.FormattingEnabled = true;
+            this.CBfontSize.Location = new System.Drawing.Point(159, 12);
+            this.CBfontSize.Name = "CBfontSize";
+            this.CBfontSize.Size = new System.Drawing.Size(72, 21);
+            this.CBfontSize.TabIndex = 0;
             // 
-            // CBestiloFonte
+            // CBfontStyle
             // 
-            this.CBestiloFonte.FormattingEnabled = true;
-            this.CBestiloFonte.Location = new System.Drawing.Point(12, 43);
-            this.CBestiloFonte.Name = "CBestiloFonte";
-            this.CBestiloFonte.Size = new System.Drawing.Size(219, 21);
-            this.CBestiloFonte.TabIndex = 1;
+            this.CBfontStyle.FormattingEnabled = true;
+            this.CBfontStyle.Location = new System.Drawing.Point(12, 43);
+            this.CBfontStyle.Name = "CBfontStyle";
+            this.CBfontStyle.Size = new System.Drawing.Size(219, 21);
+            this.CBfontStyle.TabIndex = 1;
             // 
-            // EditarFonte
+            // EditaFont
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(243, 73);
-            this.Controls.Add(this.CBestiloFonte);
-            this.Controls.Add(this.CBtamanhoFonte);
+            this.Controls.Add(this.CBfontStyle);
+            this.Controls.Add(this.CBfontSize);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "EditarFonte";
-            this.Text = "Fonte";
+            this.Name = "EditFont";
+            this.Text = "Font";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ComboBox CBtamanhoFonte;
-        private System.Windows.Forms.ComboBox CBestiloFonte;
+        private System.Windows.Forms.ComboBox CBfontSize;
+        private System.Windows.Forms.ComboBox CBfontStyle;
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Bloco_de_notas.Properties {
+﻿namespace Type_Writer.Properties {
     
     
     // This class allows you to handle specific events on the settings class:

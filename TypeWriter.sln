@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bloco de notas", "Bloco de notas.csproj", "{136747F0-2A42-48DC-9061-CF6F741DFE2C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeWriter", "TypeWriter.csproj", "{136747F0-2A42-48DC-9061-CF6F741DFE2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
