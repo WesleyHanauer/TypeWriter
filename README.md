@@ -1,7 +1,3 @@
-# Bloco-de-notas
+# TypeWriter
 
-Um edito de texto simples escrito em C#
-
-## Contribuição
-
-Qualquer um é bem vindo para contribuir com o projeto.
+TypeWriter is a simple text editor for windows.
