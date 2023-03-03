@@ -28,7 +28,11 @@ namespace Type_Writer
 
         private void ConfigureComboBoxes(object sender, EventArgs e)
         {
-            for (int i = 8; i <= 72; i += 4)
+            for (int i = 8; i <= 24; i += 2)
+            {
+                CBfontSize.Items.Add(i);
+            }
+            for (int i = 28; i <= 72; i += 4)
             {
                 CBfontSize.Items.Add(i);
             }
