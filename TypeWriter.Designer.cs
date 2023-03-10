@@ -41,7 +41,7 @@
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtTexto
+            // txtText
             // 
             this.txtText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -51,7 +51,7 @@
             this.txtText.Font = new System.Drawing.Font("Arial", 12F);
             this.txtText.Location = new System.Drawing.Point(0, 27);
             this.txtText.Multiline = true;
-            this.txtText.Name = "txtTexto";
+            this.txtText.Name = "txtText";
             this.txtText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtText.Size = new System.Drawing.Size(838, 473);
             this.txtText.TabIndex = 0;
@@ -124,7 +124,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Type_Writer";
-            this.Text = "Bloco de notas";
+            this.Text = "TypeWriter";
             this.Load += new System.EventHandler(this.LoadMainForm);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

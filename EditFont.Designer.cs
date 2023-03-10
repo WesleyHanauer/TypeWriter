@@ -49,7 +49,7 @@
             this.CBfontStyle.Size = new System.Drawing.Size(219, 21);
             this.CBfontStyle.TabIndex = 1;
             // 
-            // EditaFont
+            // EditFont
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
